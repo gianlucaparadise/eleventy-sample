@@ -1,8 +1,13 @@
 {
-  "name": "eleventy-sample",
+  "name": "my-favorite-albums",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "build": "npx @11ty/eleventy --input=src",
+    "serve": "npx @11ty/eleventy --input=src --serve"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0"
   }
