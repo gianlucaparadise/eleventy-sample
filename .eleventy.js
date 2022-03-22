@@ -1,5 +1,12 @@
-module.exports = function (eleventyConfig) {
-    // Output directory: _site
+const inspect = require("util").inspect;
 
-    eleventyConfig.addPassthroughCopy({ "src/_includes/css": "css" });
+module.exports = function (eleventyConfig) {
+  // Output directory: _site
+
+  eleventyConfig.addPassthroughCopy({ "src/_includes/css": "css" });
+
+  eleventyConfig.addFilter(
+    "debug",
+    (content) => `<pre>${inspect(content)}</pre>`
+  );
 };
