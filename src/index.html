@@ -7,4 +7,11 @@ title: My favorite albums
     This is where I collect all my favorite albums
 </p>
 
+<p>
+    First album: {{ allAlbums[0].album.name }}
+</p>
+<p>
+    First album in '60 {{ albumsByYear['196'][0].album.name }}
+</p>
+
 {% include 'button.html', label: 'Press me' %}
