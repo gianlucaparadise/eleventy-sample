@@ -1,34 +1,38 @@
 nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 nav > .nav-logo {
-    margin: 16px;
-    font-size: xx-large;
+  margin: 16px;
+  font-family: "Comfortaa", cursive;
+  font-size: xx-large;
+  line-height: 1.1em;
+  flex-shrink: 0;
 }
 
 nav ul {
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    column-gap: 4px;
-    padding: 16px;
-    /* background-color: aqua; */
-    
-    /* hide scrollbar but allow scrolling */
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-x: scroll; 
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 4px;
+  padding: 16px;
+  /* background-color: aqua; */
+
+  /* hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll;
 }
 
 /* hide scrollbar but allow scrolling */
 nav ul::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 nav ul > a {
-    vertical-align: middle;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
