@@ -10,8 +10,8 @@ title: My favorite albums
 <p>
     First album: {{ allAlbums[0].album.name }}
 </p>
+{% include 'album-item.html', item: allAlbums[0] %}
 <p>
     First album in '60 {{ albumsByYear['196'][0].album.name }}
 </p>
-
-{% include 'button.html', label: 'Press me' %}
+{% include 'album-item.html', item: albumsByYear['196'][0] %}

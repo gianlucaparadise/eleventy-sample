@@ -1,0 +1,6 @@
+<div class="album-item">
+    <h2 class="text-right">{{ item.album.release_date | year }}</h2>
+    <img src="{{ item.album | album-cover-url }}" alt="{{ item.album.name }}">
+    <h1 class="line-clamp">{{ item.album.name }}</h1>
+    <h2 class="text-right line-clamp">{{ item.album.artists[0].name }}</h2>
+</div>
