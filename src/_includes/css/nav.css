@@ -14,22 +14,9 @@ nav > .nav-logo {
 
 nav ul {
   margin: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   column-gap: 4px;
   padding: 16px;
   /* background-color: aqua; */
-
-  /* hide scrollbar but allow scrolling */
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-x: scroll;
-}
-
-/* hide scrollbar but allow scrolling */
-nav ul::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
 }
 
 nav ul > a {

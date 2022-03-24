@@ -4,7 +4,7 @@
   flex-direction: column;
 
   padding: 2em;
-  background-color: darkseagreen;
+  background-color: var(--accent-color);
 }
 
 .album-item .line-clamp {

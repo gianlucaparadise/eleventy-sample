@@ -3,15 +3,6 @@ layout: base.html
 title: My favorite albums
 ---
 
-<p>
-    This is where I collect all my favorite albums
-</p>
+{% include 'albums-row.html', albums: allAlbums, title: "All" %}
 
-<p>
-    First album: {{ allAlbums[0].album.name }}
-</p>
-{% include 'album-item.html', item: allAlbums[0] %}
-<p>
-    First album in '60 {{ albumsByYear['196'][0].album.name }}
-</p>
-{% include 'album-item.html', item: albumsByYear['196'][0] %}
+{% include 'albums-row.html', albums: albumsByYear['196'], title: "From Sixties" %}

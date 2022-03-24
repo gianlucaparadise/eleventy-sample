@@ -1,5 +1,27 @@
+:root {
+  --accent-color: darkseagreen;
+  --background-color: antiquewhite;
+}
+
 html,
 body {
   margin: 0px;
   font-family: "Mukta", sans-serif;
+  background-color: var(--background-color);
+}
+
+.scrollable-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  /* hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll;
+}
+
+/* hide scrollbar but allow scrolling */
+.scrollable-row::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
