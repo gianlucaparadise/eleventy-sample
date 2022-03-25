@@ -1,0 +1,15 @@
+.albums-wall {
+  display: flex;
+  flex-direction: column;
+}
+
+.albums-wall > .albums-wall-list {
+  --items-gap: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: var(--items-gap);
+  row-gap: var(--items-gap);
+  padding: 0 var(--items-gap);
+}

@@ -20,6 +20,8 @@
   font-weight: bold;
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
 }
 
 .album-item > h2 {
