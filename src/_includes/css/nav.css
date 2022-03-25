@@ -8,18 +8,38 @@ nav > .nav-logo {
   margin: 16px;
   font-family: "Comfortaa", cursive;
   font-size: xx-large;
+  font-weight: bold;
   line-height: 1.1em;
   flex-shrink: 0;
 }
 
+nav .selected-menu {
+  font-size: large;
+  font-weight: normal;
+}
+
 nav ul {
   margin: 0px;
-  column-gap: 4px;
-  padding: 16px;
-  /* background-color: aqua; */
+  padding: 16px 4px;
 }
 
 nav ul > a {
   vertical-align: middle;
   flex-shrink: 0;
+  padding: 5px 16px;
+  text-decoration: none;
+  color: black;
+
+  transition: background-color 400ms linear, color 400ms linear;
+}
+
+nav ul > a:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+nav ul > a:focus {
+  outline-color: var(--dark-accent-color);
+  outline-width: 2px;
+  outline-style: solid;
 }
