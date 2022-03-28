@@ -4,4 +4,6 @@ title: My favorite albums - By Duration
 menu: by-duration
 ---
 
-<h1>Albums: By Duration</h1>
+{%- for pair in albumsByDuration %}
+{% include 'albums-row.html', albums: pair[1], title: pair[0] %}
+{% endfor -%}
