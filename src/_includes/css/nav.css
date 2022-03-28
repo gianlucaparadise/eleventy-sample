@@ -11,6 +11,7 @@ nav > .nav-logo {
   font-weight: bold;
   line-height: 1.1em;
   flex-shrink: 0;
+  min-width: 310px;
 }
 
 nav .selected-menu {

@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/albums-row.css">
     <link rel="stylesheet" href="/css/albums-wall.css">
     <link rel="stylesheet" href="/css/album-item.css">
@@ -31,8 +32,6 @@
                 : All
                 {% elsif menu == "by-decade" %}
                 : By Decade
-                {% elsif menu == "by-tag" %}
-                : By Tag
                 {% elsif menu == "by-duration" %}
                 : By Duration
                 {% endif %}
@@ -42,21 +41,20 @@
             {% if menu != "overview" %}
             <a href="/" aria-label="Albums Overview">Overview</a>
             {% endif %}
-            {% if menu != "all" %}
-            <a href="/albums_all" aria-label="All Albums">All</a>
-            {% endif %}
             {% if menu != "by-decade" %}
             <a href="/albums_by_decade" aria-label="Albums by decade">By Decade</a>
-            {% endif %}
-            {% if menu != "by-tag" %}
-            <a href="/albums_by_tag" aria-label="Albums by tag">By Tag</a>
             {% endif %}
             {% if menu != "by-duration" %}
             <a href="/albums_by_duration" aria-label="Albums by duration">By Duration</a>
             {% endif %}
+            {% if menu != "all" %}
+            <a href="/albums_all" aria-label="All Albums">All</a>
+            {% endif %}
         </ul>
     </nav>
     <main>{{ content }}</main>
+    <footer>
+    </footer>
 </body>
 
 </html>
