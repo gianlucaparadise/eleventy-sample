@@ -1,14 +1,13 @@
 const groupBy = require("lodash/fp/groupBy");
 
-const favoriteAlbums = require("./favoriteAlbums.json");
+const getAllAlbums = require("./allAlbums");
 
-const getDurationInTensOfMinutes = (item) => {
-  const tracks = item.album.tracks.items;
-  const durationSum = tracks.reduce((acc, track) => acc + track.duration_ms, 0);
-  const durationInMinutes = durationSum / 60000;
+const getDurationInTensOfMinutes = (album) => {
+  const durationInMinutes = album.durationMinutes;
   return `${Math.floor(durationInMinutes / 10)}0'`;
 };
 
 module.exports = function () {
-  return groupBy(getDurationInTensOfMinutes, favoriteAlbums.data);
+  const allAlbums = getAllAlbums();
+  return groupBy(getDurationInTensOfMinutes, allAlbums);
 };

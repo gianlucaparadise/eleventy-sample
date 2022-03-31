@@ -1,8 +1,8 @@
 <div class="albums-row">
     <h1>{{ title }}</h1>
     <div class="albums-row-list scrollable-row">
-        {%- for item in albums %}
-        {% include 'album-item.html', item: item %}
+        {%- for album in albums %}
+        {% include 'album-item.html', album: album %}
         {% endfor -%}
     </div>
 </div>
