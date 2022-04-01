@@ -2,6 +2,10 @@ const first = require("lodash/fp/first");
 const sumBy = require("lodash/fp/sumBy");
 const favoriteAlbums = require("./favoriteAlbums.json");
 
+/**
+ * @typedef {import('../types/typedefs').Album} Album
+ */
+
 const getReleaseYear = (album) => {
   const release = new Date(album.release_date);
   return release.getFullYear();
@@ -21,6 +25,11 @@ const getCoverUrl = (album) => {
   return image?.url;
 };
 
+/**
+ * Maps a spotify album type to our album type
+ * @param {any} item Spotify album object
+ * @returns {Album}
+ */
 const toAlbum = (item) => ({
   id: item.album.id,
   name: item.album.name,
@@ -30,6 +39,10 @@ const toAlbum = (item) => ({
   coverUrl: getCoverUrl(item.album),
 });
 
+/**
+ * @returns {Album[]}
+ */
 module.exports = function () {
+  // @ts-ignore
   return favoriteAlbums.data.map(toAlbum);
 };
