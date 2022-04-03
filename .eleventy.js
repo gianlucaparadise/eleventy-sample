@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const debugFilter = require("./src/_filters/debug");
 
 module.exports = function (eleventyConfig) {

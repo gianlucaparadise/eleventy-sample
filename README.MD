@@ -6,4 +6,7 @@ This is where I collect my favorite albums.
 
 I used this project to test the capabilities of the following technologies:
 
-* Eleventy
+- Jamstack
+- Eleventy
+- Vecel
+- Heroku

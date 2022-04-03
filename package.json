@@ -1,15 +1,17 @@
 {
-  "name": "my-favorite-albums",
+  "name": "gianpara-favorite-albums",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf _site",
     "build": "npx @11ty/eleventy --input=src",
-    "serve": "npx @11ty/eleventy --input=src --serve"
+    "serve": "npx @11ty/eleventy --input=src --serve",
+    "deploy": "vercel"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "dotenv": "^16.0.0",
     "lodash": "^4.17.21"
   }
 }
