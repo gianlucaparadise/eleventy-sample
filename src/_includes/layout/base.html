@@ -26,8 +26,8 @@
         <div class="nav-logo">
             My Albums
             <span class="selected-menu">
-                {% if menu == "overview" %}
-                : Overview
+                {% if menu == "fresh-finds" %}
+                : Fresh Finds
                 {% elsif menu == "all" %}
                 : All
                 {% elsif menu == "by-decade" %}
@@ -38,8 +38,8 @@
             </span>
         </div>
         <ul class="scrollable-row">
-            {% if menu != "overview" %}
-            <a href="/" aria-label="Albums Overview">Overview</a>
+            {% if menu != "fresh-finds" %}
+            <a href="/" aria-label="My Fresh Finds">Fresh Finds</a>
             {% endif %}
             {% if menu != "by-decade" %}
             <a href="/albums_by_decade" aria-label="Albums by decade">By Decade</a>
