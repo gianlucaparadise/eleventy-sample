@@ -26,15 +26,7 @@
         <div class="nav-logo">
             My Albums
             <span class="selected-menu">
-                {% if menu == "fresh-finds" %}
-                : Fresh Finds
-                {% elsif menu == "all" %}
-                : All
-                {% elsif menu == "by-decade" %}
-                : By Decade
-                {% elsif menu == "by-duration" %}
-                : By Duration
-                {% endif %}
+                {{ menu | extractLogoLabel }}
             </span>
         </div>
         <ul class="scrollable-row">
