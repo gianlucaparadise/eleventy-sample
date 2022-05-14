@@ -38,18 +38,9 @@
             </span>
         </div>
         <ul class="scrollable-row">
-            {% if menu != "fresh-finds" %}
-            <a href="/" aria-label="My Fresh Finds">Fresh Finds</a>
-            {% endif %}
-            {% if menu != "by-decade" %}
-            <a href="/albums_by_decade" aria-label="Albums by decade">By Decade</a>
-            {% endif %}
-            {% if menu != "by-duration" %}
-            <a href="/albums_by_duration" aria-label="Albums by duration">By Duration</a>
-            {% endif %}
-            {% if menu != "all" %}
-            <a href="/albums_all" aria-label="All Albums">All</a>
-            {% endif %}
+            {%- for menuItem in topMenuItems %}
+            <a href="{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">{{ menuItem.label }}</a>
+            {% endfor -%}
         </ul>
     </nav>
     <main>{{ content }}</main>

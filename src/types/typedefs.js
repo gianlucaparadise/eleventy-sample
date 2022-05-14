@@ -13,4 +13,16 @@
  * @property {String} coverUrl Url of the image for the album cover
  */
 
+/**
+ * Menu Item
+ * @typedef {Object} MenuItem
+ * @property {Number} id Id of the menu item
+ * @property {String} label Human readable label of the menu item
+ * @property {String} ariaLabel Label to be used for screen readers
+ * @property {String} relativeHref Link addressed by the menu item
+ * @property {String} logoLabel Label to be displayed next to the Logo
+ * @property {String} tag A string tag that identifies this menu item
+ * @property {Number} index Index of the menu item in order
+ */
+
 exports.unused = {};
