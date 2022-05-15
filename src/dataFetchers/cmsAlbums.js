@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const cmsHost = process.env.CMS_HOST;
 const cmsApiKey = process.env.CMS_API_KEY;
@@ -23,18 +23,20 @@ const fetchAlbumsFromCms = async function () {
 
   console.info("fetchAlbumsFromCms - Fetching from:", url, "with opts:", opts);
 
-  const response = await fetch(url, opts);
+  const response = await EleventyFetch(url.toString(), {
+    duration: "30m",
+    type: "json",
+    fetchOptions: opts,
+  });
 
-  const data = await response.json();
-
-  if (data.error) {
-    console.error("Error while fetching cmsAlbums:", data.error);
+  if (response.error) {
+    console.error("Error while fetching cmsAlbums:", response.error);
     throw new Error("Error while fetching cmsAlbums");
   }
 
-  console.info("fetchAlbumsFromCms - Fetched:", data);
+  console.info("fetchAlbumsFromCms - Fetched:", response);
 
-  return data;
+  return response;
 };
 
 /**
