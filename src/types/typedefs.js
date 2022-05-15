@@ -25,4 +25,11 @@
  * @property {Number} index Index of the menu item in order
  */
 
+/**
+ * Eleventy Props
+ * @typedef {Object} EleventyProps
+ * @property {Album[]} cmsAlbums List of albums retrieved from CMS
+ * @property {MenuItem[]} topMenuItems List of menu items for the top menu retrieved from the CMS
+ */
+
 exports.unused = {};

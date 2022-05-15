@@ -1,7 +1,13 @@
-const getMenuItems = require("../_data/topMenuItems");
+/**
+ * @typedef {import('../types/typedefs').MenuItem} MenuItem
+ */
 
-module.exports = async (menuTag) => {
-  const menuItems = await getMenuItems();
-  const menuItem = menuItems.find((m) => m.tag === menuTag);
+/**
+ * @param {string} menuTag
+ * @param {MenuItem[]} topMenuItems
+ * @returns
+ */
+module.exports = (menuTag, topMenuItems) => {
+  const menuItem = topMenuItems.find((m) => m.tag === menuTag);
   return menuItem.logoLabel;
 };
