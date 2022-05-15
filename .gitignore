@@ -1,6 +1,7 @@
 node_modules
 
 _site/
+.cache
 .vercel
 
 # You can create this file with `vercel env pull`
