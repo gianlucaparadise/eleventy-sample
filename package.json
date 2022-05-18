@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf _site",
-    "build": "npx @11ty/eleventy --input=src",
+    "build": "node build-scripts/build-by-language.js",
     "serve": "npx @11ty/eleventy --input=src --serve",
     "deploy": "vercel"
   },

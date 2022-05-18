@@ -1,0 +1,12 @@
+[
+  {
+    "localeCode": "en",
+    "flag": "🇬🇧",
+    "label": "English"
+  },
+  {
+    "localeCode": "it",
+    "flag": "🇮🇹",
+    "label": "Italiano"
+  }
+]
