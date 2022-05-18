@@ -12,7 +12,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_includes/css": "css" });
 
   eleventyConfig.addGlobalData("cmsAlbums", fetchCmsAlbums);
-  eleventyConfig.addGlobalData("topMenuItems", fetchTopMenuItems);
+  eleventyConfig.addGlobalData("topMenuItems", () =>
+    fetchTopMenuItems(eleventyConfig)
+  );
 
   eleventyConfig.addFilter("debug", debugFilter);
   eleventyConfig.addFilter("extractLogoLabel", extractLogoLabelFilter);

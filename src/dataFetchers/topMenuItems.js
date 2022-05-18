@@ -7,11 +7,12 @@ const cmsApiKey = process.env.CMS_API_KEY;
  * @typedef {import('../types/typedefs').MenuItem} MenuItem
  */
 
-const fetchMenuFromCms = async function () {
+const fetchMenuFromCms = async function (locale) {
   const url = new URL("/api/top-menu", cmsHost);
   url.search = new URLSearchParams({
     "populate[0]": "menu_items",
     "sort[0]": "menu_items.index",
+    locale: locale,
   }).toString();
 
   const opts = {
@@ -38,9 +39,11 @@ const fetchMenuFromCms = async function () {
   return response;
 };
 
-module.exports = async function () {
+module.exports = async function (configData) {
+  const locale = configData.globalData.locale;
+
   try {
-    const topMenu = await fetchMenuFromCms();
+    const topMenu = await fetchMenuFromCms(locale);
     if (!topMenu?.data) {
       console.info("topMenu - Empty Top Menu", topMenu);
       return [];
