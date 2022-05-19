@@ -6,13 +6,14 @@
   "scripts": {
     "clean": "rm -rf _site",
     "build": "node build-scripts/build-by-language.js",
-    "serve": "npx @11ty/eleventy --input=src --serve",
+    "serve": "npx http-server _site -p 8080",
     "deploy": "vercel"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-fetch": "^3.0.0",
     "dotenv": "^16.0.0",
+    "http-server": "^14.1.0",
     "lodash": "^4.17.21"
   }
 }

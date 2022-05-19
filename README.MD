@@ -17,3 +17,4 @@ I used this project to test the capabilities of the following technologies:
 - Sticky header with shadow effect
 - pagination handling for cms albums
 - Add footer
+- Add custom file watcher
