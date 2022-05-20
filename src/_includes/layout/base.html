@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Mukta:wght@200&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/albums-row.css">
-    <link rel="stylesheet" href="/css/albums-wall.css">
-    <link rel="stylesheet" href="/css/album-item.css">
+    <link rel="stylesheet" href="/{{locale}}/css/base.css">
+    <link rel="stylesheet" href="/{{locale}}/css/nav.css">
+    <link rel="stylesheet" href="/{{locale}}/css/footer.css">
+    <link rel="stylesheet" href="/{{locale}}/css/albums-row.css">
+    <link rel="stylesheet" href="/{{locale}}/css/albums-wall.css">
+    <link rel="stylesheet" href="/{{locale}}/css/album-item.css">
 
     <title>{{title}}</title>
 </head>
@@ -31,7 +31,8 @@
         </div>
         <ul class="scrollable-row">
             {%- for menuItem in topMenuItems %}
-            <a href="{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">{{ menuItem.label }}</a>
+            <a href="/{{locale}}/{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">{{ menuItem.label
+                }}</a>
             {% endfor -%}
         </ul>
     </nav>
