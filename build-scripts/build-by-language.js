@@ -1,5 +1,5 @@
 const Eleventy = require("@11ty/eleventy");
-const languages = require("../src/_data/lanugages.json");
+const languages = require("../src/_data/languages.json");
 
 const build = async function (localeCode) {
   let elev = new Eleventy("src", `_site/${localeCode}`, {
