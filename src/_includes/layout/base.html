@@ -38,6 +38,17 @@
             </li>
             {% endfor -%}
         </menu>
+        <ul class="languages">
+            {%- for language in languages %}
+            {%- if language.localeCode != locale %}
+            <li>
+                <a href="/{{ language.localeCode }}/" aria-label="{{ language.label }}">
+                    {{ language.flag }}
+                </a>
+            </li>
+            {%- endif %}
+            {% endfor -%}
+        </ul>
     </nav>
     <main>{{ content }}</main>
     <footer>
