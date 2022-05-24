@@ -29,12 +29,15 @@
                 {{ menu | extractLogoLabel: topMenuItems }}
             </span>
         </div>
-        <ul class="scrollable-row">
+        <menu class="scrollable-row">
             {%- for menuItem in topMenuItems %}
-            <a href="/{{locale}}/{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">{{ menuItem.label
-                }}</a>
+            <li>
+                <a href="/{{ locale }}/{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">
+                    {{ menuItem.label }}
+                </a>
+            </li>
             {% endfor -%}
-        </ul>
+        </menu>
     </nav>
     <main>{{ content }}</main>
     <footer>
