@@ -14,7 +14,5 @@ I used this project to test the capabilities of the following technologies:
 ## TODO
 
 - Switch to Spotify API call instead of `favoriteAlbums.json`
-- Sticky header with shadow effect
-- pagination handling for cms albums
 - Add footer
 - Add custom file watcher
