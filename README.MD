@@ -15,4 +15,3 @@ I used this project to test the capabilities of the following technologies:
 
 - Switch to Spotify API call instead of `favoriteAlbums.json`
 - Add footer
-- Add custom file watcher

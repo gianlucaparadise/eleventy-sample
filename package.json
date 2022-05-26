@@ -7,6 +7,8 @@
     "clean": "rm -rf _site",
     "build": "node build-scripts/build-by-language.js",
     "serve": "npx http-server _site -p 8080",
+    "watch": "npx chokidar 'src/**/*.html' 'src/**/*.css' 'src/**/*.js' 'src/**/*.json' '.eleventy.js' -c 'yarn build' --initial",
+    "dev": "yarn watch & yarn serve",
     "deploy": "vercel"
   },
   "devDependencies": {
@@ -14,6 +16,7 @@
     "@11ty/eleventy-fetch": "^3.0.0",
     "dotenv": "^16.0.0",
     "http-server": "^14.1.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "chokidar-cli": "^3.0.0"
   }
 }
