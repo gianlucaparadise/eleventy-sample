@@ -34,7 +34,7 @@
         </div>
         <menu class="scrollable-row">
             {%- for menuItem in topMenuItems %}
-            <li>
+            <li class="{{ menuItem.tag | selectedWhenEqualsTo: menu }}">
                 <a href="/{{ locale }}/{{ menuItem.relativeHref }}" aria-label="{{ menuItem.ariaLabel }}">
                     {{ menuItem.label }}
                 </a>

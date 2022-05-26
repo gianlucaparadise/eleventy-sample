@@ -43,13 +43,14 @@ nav a {
 }
 
 nav menu a {
-  padding: 5px 16px;
+  padding: 5px 12px;
+  margin: 0px 4px;
   color: black;
 
   transition: background-color 400ms linear, color 400ms linear;
 }
 
-nav menu a:hover {
+nav menu a:hover, nav menu li.selected a {
   background-color: var(--accent-color);
   color: var(--background-color);
 }
