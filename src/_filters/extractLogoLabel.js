@@ -9,5 +9,5 @@
  */
 module.exports = (menuTag, topMenuItems) => {
   const menuItem = topMenuItems.find((m) => m.tag === menuTag);
-  return menuItem.logoLabel;
+  return menuItem?.logoLabel;
 };
